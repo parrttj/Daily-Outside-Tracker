@@ -1,0 +1,17 @@
+{
+  "name": "Outdoor Time Tracker",
+  "short_name": "Outdoor Tracker",
+  "description": "Track your outdoor time and reach your 1000 hour yearly goal",
+  "start_url": "/Daily-Outside-Tracker/",
+  "display": "standalone",
+  "background_color": "#4a7c59",
+  "theme_color": "#4a7c59",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

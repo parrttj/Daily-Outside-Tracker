@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Sky background -->
+  <rect width="512" height="512" fill="#87CEEB" rx="80"/>
+  
+  <!-- Sun -->
+  <circle cx="380" cy="120" r="60" fill="#FFD700"/>
+  <circle cx="380" cy="120" r="50" fill="#FFA500"/>
+  
+  <!-- Sun rays -->
+  <line x1="380" y1="40" x2="380" y2="70" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
+  <line x1="380" y1="170" x2="380" y2="200" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
+  <line x1="300" y1="120" x2="330" y2="120" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
+  <line x1="430" y1="120" x2="460" y2="120" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
+  <line x1="325" y1="65" x2="345" y2="85" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
+  <line x1="415" y1="155" x2="435" y2="175" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
+  <line x1="435" y1="65" x2="415" y2="85" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
+  <line x1="345" y1="155" x2="325" y2="175" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Ground -->
+  <ellipse cx="256" cy="480" rx="280" ry="60" fill="#90EE90"/>
+  
+  <!-- Left tree -->
+  <rect x="140" y="320" width="40" height="120" fill="#8B4513" rx="5"/>
+  <polygon points="160,320 100,240 220,240" fill="#2D5016"/>
+  <polygon points="160,280 110,210 210,210" fill="#4A7C59"/>
+  <polygon points="160,240 120,180 200,180" fill="#2D5016"/>
+  
+  <!-- Middle tree -->
+  <rect x="236" y="300" width="40" height="140" fill="#8B4513" rx="5"/>
+  <polygon points="256,300 196,210 316,210" fill="#2D5016"/>
+  <polygon points="256,260 206,180 306,180" fill="#4A7C59"/>
+  <polygon points="256,220 216,150 296,150" fill="#2D5016"/>
+  
+  <!-- Right tree -->
+  <rect x="332" y="330" width="40" height="110" fill="#8B4513" rx="5"/>
+  <polygon points="352,330 292,250 412,250" fill="#2D5016"/>
+  <polygon points="352,290 302,220 402,220" fill="#4A7C59"/>
+  <polygon points="352,250 312,190 392,190" fill="#2D5016"/>
+  
+  <!-- Happy face on sun -->
+  <circle cx="370" cy="115" r="5" fill="#FF6347"/>
+  <circle cx="390" cy="115" r="5" fill="#FF6347"/>
+  <path d="M 365 130 Q 380 140 395 130" stroke="#FF6347" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>
