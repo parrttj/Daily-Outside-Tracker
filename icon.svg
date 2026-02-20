@@ -1,44 +1,54 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <!-- Sky background -->
-  <rect width="512" height="512" fill="#87CEEB" rx="80"/>
+  <!-- Gradient sky background -->
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B0E0E6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
   
-  <!-- Sun -->
-  <circle cx="380" cy="120" r="60" fill="#FFD700"/>
-  <circle cx="380" cy="120" r="50" fill="#FFA500"/>
+  <rect width="512" height="512" fill="url(#skyGrad)" rx="90"/>
+  
+  <!-- Large happy sun -->
+  <circle cx="256" cy="200" r="100" fill="#FFD700"/>
+  <circle cx="256" cy="200" r="85" fill="#FFA500"/>
   
   <!-- Sun rays -->
-  <line x1="380" y1="40" x2="380" y2="70" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
-  <line x1="380" y1="170" x2="380" y2="200" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
-  <line x1="300" y1="120" x2="330" y2="120" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
-  <line x1="430" y1="120" x2="460" y2="120" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
-  <line x1="325" y1="65" x2="345" y2="85" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
-  <line x1="415" y1="155" x2="435" y2="175" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
-  <line x1="435" y1="65" x2="415" y2="85" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
-  <line x1="345" y1="155" x2="325" y2="175" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
+  <g stroke="#FFD700" stroke-width="12" stroke-linecap="round">
+    <line x1="256" y1="70" x2="256" y2="100"/>
+    <line x1="256" y1="300" x2="256" y2="330"/>
+    <line x1="126" y1="200" x2="156" y2="200"/>
+    <line x1="356" y1="200" x2="386" y2="200"/>
+    <line x1="165" y1="109" x2="190" y2="134"/>
+    <line x1="322" y1="266" x2="347" y2="291"/>
+    <line x1="347" y1="109" x2="322" y2="134"/>
+    <line x1="190" y1="266" x2="165" y2="291"/>
+  </g>
   
-  <!-- Ground -->
-  <ellipse cx="256" cy="480" rx="280" ry="60" fill="#90EE90"/>
+  <!-- Happy face -->
+  <circle cx="230" cy="185" r="12" fill="#FF6347"/>
+  <circle cx="282" cy="185" r="12" fill="#FF6347"/>
+  <path d="M 210 220 Q 256 250 302 220" stroke="#FF6347" stroke-width="10" fill="none" stroke-linecap="round"/>
   
-  <!-- Left tree -->
-  <rect x="140" y="320" width="40" height="120" fill="#8B4513" rx="5"/>
-  <polygon points="160,320 100,240 220,240" fill="#2D5016"/>
-  <polygon points="160,280 110,210 210,210" fill="#4A7C59"/>
-  <polygon points="160,240 120,180 200,180" fill="#2D5016"/>
+  <!-- Ground with grass -->
+  <ellipse cx="256" cy="490" rx="300" ry="80" fill="#90EE90"/>
+  <ellipse cx="256" cy="480" rx="280" ry="70" fill="#7CCD7C"/>
   
-  <!-- Middle tree -->
-  <rect x="236" y="300" width="40" height="140" fill="#8B4513" rx="5"/>
-  <polygon points="256,300 196,210 316,210" fill="#2D5016"/>
-  <polygon points="256,260 206,180 306,180" fill="#4A7C59"/>
-  <polygon points="256,220 216,150 296,150" fill="#2D5016"/>
-  
-  <!-- Right tree -->
-  <rect x="332" y="330" width="40" height="110" fill="#8B4513" rx="5"/>
-  <polygon points="352,330 292,250 412,250" fill="#2D5016"/>
-  <polygon points="352,290 302,220 402,220" fill="#4A7C59"/>
-  <polygon points="352,250 312,190 392,190" fill="#2D5016"/>
-  
-  <!-- Happy face on sun -->
-  <circle cx="370" cy="115" r="5" fill="#FF6347"/>
-  <circle cx="390" cy="115" r="5" fill="#FF6347"/>
-  <path d="M 365 130 Q 380 140 395 130" stroke="#FF6347" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- Simple tree silhouettes -->
+  <g opacity="0.9">
+    <!-- Left tree -->
+    <rect x="100" y="360" width="35" height="130" fill="#8B4513" rx="4"/>
+    <polygon points="117,360 70,280 164,280" fill="#2D5016"/>
+    <polygon points="117,320 75,250 159,250" fill="#4A7C59"/>
+    
+    <!-- Center tree -->
+    <rect x="238" y="340" width="36" height="150" fill="#8B4513" rx="4"/>
+    <polygon points="256,340 205,250 307,250" fill="#2D5016"/>
+    <polygon points="256,300 210,220 302,220" fill="#4A7C59"/>
+    
+    <!-- Right tree -->
+    <rect x="377" y="370" width="35" height="120" fill="#8B4513" rx="4"/>
+    <polygon points="394,370 348,295 440,295" fill="#2D5016"/>
+    <polygon points="394,335 353,270 435,270" fill="#4A7C59"/>
+  </g>
 </svg>
