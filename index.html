@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outdoor Time Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌲 Outdoor Time Tracker 🌲</h1>
+        <p class="subtitle">Track your journey to 1000 hours in nature</p>
+        
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="tracker">Tracker</button>
+            <button class="tab-btn" data-tab="calendar">Calendar</button>
+        </div>
+
+        <div id="trackerTab" class="tab-content active">
+        <div class="progress-trackers">
+            <div class="progress-card">
+                <h3>Today's Progress</h3>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="todayProgress"></div>
+                </div>
+                <div class="progress-info">
+                    <span id="todayProgressText">0.00 / 2.75 hours</span>
+                    <span id="todayProgressStatus" class="progress-status"></span>
+                </div>
+            </div>
+            <div class="progress-card">
+                <h3>This Week</h3>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="weekProgress"></div>
+                </div>
+                <div class="progress-info">
+                    <span id="weekProgressText">0.00 / 19.25 hours</span>
+                    <span id="weekProgressStatus" class="progress-status"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="timer-section">
+            <h2>Timer</h2>
+            <div class="timer-display" id="timerDisplay">00:00:00</div>
+            <div class="timer-controls">
+                <button id="startBtn" class="btn btn-start">Start</button>
+                <button id="stopBtn" class="btn btn-stop" disabled>Stop</button>
+            </div>
+        </div>
+
+        <div class="manual-entry">
+            <h2>Manual Entry</h2>
+            <div class="form-group">
+                <label for="entryDate">Date:</label>
+                <input type="date" id="entryDate">
+            </div>
+            <div class="form-group">
+                <label for="entryHours">Hours:</label>
+                <input type="number" id="entryHours" min="0" step="0.01" placeholder="0.00">
+            </div>
+            <button id="addBtn" class="btn btn-primary">Add Time</button>
+        </div>
+
+        <div class="history">
+            <h2>History for <span id="historyDateLabel"></span></h2>
+            <div id="historyList"></div>
+        </div>
+        </div>
+
+        <div id="calendarTab" class="tab-content">
+            <div class="goals">
+                <div class="goal-item">
+                    <span>Daily Goal:</span>
+                    <strong>2.75 hours</strong>
+                </div>
+                <div class="goal-item">
+                    <span>Yearly Goal:</span>
+                    <strong>1000 hours</strong>
+                </div>
+            </div>
+
+            <div class="stats">
+                <h2>Statistics</h2>
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <h3>Today</h3>
+                        <p class="stat-value" id="todayHours">0.00</p>
+                        <p class="stat-label">hours</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>This Month</h3>
+                        <p class="stat-value" id="monthHours">0.00</p>
+                        <p class="stat-label">hours</p>
+                        <p class="stat-goal" id="monthGoal"></p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>This Year</h3>
+                        <p class="stat-value" id="yearHours">0.00</p>
+                        <p class="stat-label">hours / 1000</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-header">
+                <button id="prevMonth" class="btn btn-small">←</button>
+                <h2 id="calendarMonth"></h2>
+                <button id="nextMonth" class="btn btn-small">→</button>
+            </div>
+            <div class="calendar-legend">
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #e0e0e0;"></div>
+                    <span>No data</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #ffcccb;"></div>
+                    <span>Below goal</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #90ee90;"></div>
+                    <span>Goal met (2.75h+)</span>
+                </div>
+            </div>
+            <div id="calendar" class="calendar-grid"></div>
+        </div>
+    </div>
+
+    <div id="milestoneModal" style="display: none;"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
