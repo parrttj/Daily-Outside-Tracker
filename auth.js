@@ -15,7 +15,7 @@ export function initAuth() {
             // User is signed in
             authContainer.innerHTML = `
                 <div class="auth-info">
-                    <img src="${user.photoURL || 'icon.svg'}" alt="Profile" class="profile-pic">
+                    <img src="${user.photoURL || 'icon.png'}" alt="Profile" class="profile-pic">
                     <span class="user-name">${user.displayName || user.email}</span>
                     <button id="signOutBtn" class="btn btn-small">Sign Out</button>
                 </div>
