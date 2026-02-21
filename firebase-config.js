@@ -1,15 +1,11 @@
 // Firebase Configuration
-// Replace these values with your own Firebase project credentials
-// Get these from: Firebase Console > Project Settings > Your apps > Web app
-
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+    apiKey: "AIzaSyAFPCz7f1mVKfSKg3Uq9kpxPJAEJTCYQ_I",
+    authDomain: "outdoor-time-tracker.firebaseapp.com",
+    projectId: "outdoor-time-tracker",
+    storageBucket: "outdoor-time-tracker.firebasestorage.app",
+    messagingSenderId: "1082878486138",
+    appId: "1:1082878486138:web:9bf3a7550f857895b1bdc3"
 };
 
-// Initialize Firebase (will be done in script.js)
 export default firebaseConfig;
