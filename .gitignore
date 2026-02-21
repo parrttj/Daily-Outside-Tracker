@@ -1,0 +1,15 @@
+# Firebase config with real API keys (create firebase-config.js locally)
+# firebase-config.js
+
+# Node modules (if you add any build tools later)
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo

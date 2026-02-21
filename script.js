@@ -1,3 +1,5 @@
+import { initAuth, saveToCloud, getCurrentUser } from './auth.js';
+
 let timerInterval = null;
 let startTime = null;
 let elapsedSeconds = 0;
@@ -5,13 +7,21 @@ let elapsedSeconds = 0;
 const DAILY_GOAL = 2.75;
 const YEARLY_GOAL = 1000;
 
+// Initialize authentication
+initAuth();
+
 function loadData() {
     const data = localStorage.getItem('outdoorTime');
     return data ? JSON.parse(data) : {};
 }
 
-function saveData(data) {
+async function saveData(data) {
     localStorage.setItem('outdoorTime', JSON.stringify(data));
+    
+    // Also save to cloud if user is logged in
+    if (getCurrentUser()) {
+        await saveToCloud(data);
+    }
 }
 
 function formatTime(seconds) {
@@ -106,6 +116,11 @@ function updateStats() {
     
     updateProgressTrackers();
 }
+
+// Export functions for auth.js to use
+window.updateStats = updateStats;
+window.renderHistory = renderHistory;
+window.renderCalendar = renderCalendar;
 
 function updateProgressTrackers() {
     const data = loadData();
