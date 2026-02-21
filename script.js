@@ -232,20 +232,23 @@ document.getElementById('stopBtn').addEventListener('click', stopTimer);
 
 document.getElementById('addBtn').addEventListener('click', () => {
     const date = document.getElementById('entryDate').value;
-    const hours = parseFloat(document.getElementById('entryHours').value);
+    const hours = parseInt(document.getElementById('entryHours').value) || 0;
+    const minutes = parseInt(document.getElementById('entryMinutes').value) || 0;
     
     if (!date) {
         alert('Please select a date');
         return;
     }
     
-    if (isNaN(hours) || hours <= 0) {
-        alert('Please enter a valid number of hours');
+    if (hours === 0 && minutes === 0) {
+        alert('Please enter at least some time (hours or minutes)');
         return;
     }
     
-    addTime(date, hours);
-    document.getElementById('entryHours').value = '';
+    const totalHours = hours + (minutes / 60);
+    addTime(date, totalHours);
+    document.getElementById('entryHours').value = '0';
+    document.getElementById('entryMinutes').value = '0';
 });
 
 document.getElementById('entryDate').valueAsDate = new Date();
