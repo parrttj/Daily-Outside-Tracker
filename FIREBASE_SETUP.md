@@ -58,21 +58,27 @@ These rules ensure users can only read/write their own data.
 
 ## Step 6: Update Your Code
 
-1. Open `firebase-config.js` in your project
-2. Replace the placeholder values with your Firebase config:
+1. Copy `firebase-config.example.js` to `firebase-config.js`:
+```bash
+copy firebase-config.example.js firebase-config.js
+```
+
+2. Open `firebase-config.js` in your editor
+
+3. Replace the placeholder values with your Firebase config:
 
 ```javascript
 const firebaseConfig = {
     apiKey: "YOUR_API_KEY",
     authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
     projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
+    storageBucket: "YOUR_PROJECT_ID.firebasestorage.app",
     messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
     appId: "YOUR_APP_ID"
 };
 ```
 
-3. Save the file
+4. Save the file (it won't be committed to Git)
 
 ## Step 7: Test Locally
 
