@@ -1,54 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <!-- Gradient sky background -->
-  <defs>
-    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#B0E0E6;stop-opacity:1" />
-    </linearGradient>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Circular badge background -->
+  <circle cx="100" cy="100" r="95" fill="#2d5016" stroke="#4a7c59" stroke-width="3"/>
   
-  <rect width="512" height="512" fill="url(#skyGrad)" rx="90"/>
+  <!-- Sun/Clock face -->
+  <circle cx="100" cy="70" r="35" fill="#FFD700"/>
   
-  <!-- Large happy sun -->
-  <circle cx="256" cy="200" r="100" fill="#FFD700"/>
-  <circle cx="256" cy="200" r="85" fill="#FFA500"/>
+  <!-- Clock hands (subtle) -->
+  <line x1="100" y1="70" x2="100" y2="50" stroke="#2d5016" stroke-width="3" stroke-linecap="round"/>
+  <line x1="100" y1="70" x2="115" y2="75" stroke="#2d5016" stroke-width="2" stroke-linecap="round"/>
   
-  <!-- Sun rays -->
-  <g stroke="#FFD700" stroke-width="12" stroke-linecap="round">
-    <line x1="256" y1="70" x2="256" y2="100"/>
-    <line x1="256" y1="300" x2="256" y2="330"/>
-    <line x1="126" y1="200" x2="156" y2="200"/>
-    <line x1="356" y1="200" x2="386" y2="200"/>
-    <line x1="165" y1="109" x2="190" y2="134"/>
-    <line x1="322" y1="266" x2="347" y2="291"/>
-    <line x1="347" y1="109" x2="322" y2="134"/>
-    <line x1="190" y1="266" x2="165" y2="291"/>
-  </g>
+  <!-- Mountain silhouettes -->
+  <path d="M 30 130 L 70 80 L 90 100 L 110 70 L 130 95 L 150 75 L 170 130 Z" 
+        fill="#4a7c59" opacity="0.9"/>
+  <path d="M 40 130 L 75 90 L 100 110 L 125 85 L 160 130 Z" 
+        fill="#5a8c69" opacity="0.8"/>
   
-  <!-- Happy face -->
-  <circle cx="230" cy="185" r="12" fill="#FF6347"/>
-  <circle cx="282" cy="185" r="12" fill="#FF6347"/>
-  <path d="M 210 220 Q 256 250 302 220" stroke="#FF6347" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <!-- Pine trees in foreground -->
+  <!-- Left tree -->
+  <path d="M 50 130 L 55 115 L 52 115 L 57 100 L 54 100 L 60 85 L 66 100 L 63 100 L 68 115 L 65 115 L 70 130 Z" 
+        fill="#1a3a0a"/>
   
-  <!-- Ground with grass -->
-  <ellipse cx="256" cy="490" rx="300" ry="80" fill="#90EE90"/>
-  <ellipse cx="256" cy="480" rx="280" ry="70" fill="#7CCD7C"/>
+  <!-- Center-left tree -->
+  <path d="M 75 135 L 79 122 L 77 122 L 81 110 L 79 110 L 83 98 L 87 110 L 85 110 L 89 122 L 87 122 L 91 135 Z" 
+        fill="#1a3a0a"/>
   
-  <!-- Simple tree silhouettes -->
-  <g opacity="0.9">
-    <!-- Left tree -->
-    <rect x="100" y="360" width="35" height="130" fill="#8B4513" rx="4"/>
-    <polygon points="117,360 70,280 164,280" fill="#2D5016"/>
-    <polygon points="117,320 75,250 159,250" fill="#4A7C59"/>
-    
-    <!-- Center tree -->
-    <rect x="238" y="340" width="36" height="150" fill="#8B4513" rx="4"/>
-    <polygon points="256,340 205,250 307,250" fill="#2D5016"/>
-    <polygon points="256,300 210,220 302,220" fill="#4A7C59"/>
-    
-    <!-- Right tree -->
-    <rect x="377" y="370" width="35" height="120" fill="#8B4513" rx="4"/>
-    <polygon points="394,370 348,295 440,295" fill="#2D5016"/>
-    <polygon points="394,335 353,270 435,270" fill="#4A7C59"/>
-  </g>
+  <!-- Center-right tree -->
+  <path d="M 110 135 L 114 122 L 112 122 L 116 110 L 114 110 L 118 98 L 122 110 L 120 110 L 124 122 L 122 122 L 126 135 Z" 
+        fill="#1a3a0a"/>
+  
+  <!-- Right tree -->
+  <path d="M 135 130 L 140 115 L 137 115 L 142 100 L 139 100 L 145 85 L 151 100 L 148 100 L 153 115 L 150 115 L 155 130 Z" 
+        fill="#1a3a0a"/>
+  
+  <!-- Ground/horizon line -->
+  <ellipse cx="100" cy="135" rx="70" ry="8" fill="#1a3a0a" opacity="0.3"/>
 </svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <!-- Circular badge background -->
+  <circle cx="96" cy="96" r="91" fill="#2d5016" stroke="#4a7c59" stroke-width="3"/>
+  
+  <!-- Sun/Clock face -->
+  <circle cx="96" cy="67" r="34" fill="#FFD700"/>
+  
+  <!-- Clock hands -->
+  <line x1="96" y1="67" x2="96" y2="48" stroke="#2d5016" stroke-width="3" stroke-linecap="round"/>
+  <line x1="96" y1="67" x2="110" y2="72" stroke="#2d5016" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Mountain silhouettes -->
+  <path d="M 29 125 L 67 77 L 86 96 L 106 67 L 125 91 L 144 72 L 163 125 Z" 
+        fill="#4a7c59" opacity="0.9"/>
+  <path d="M 38 125 L 72 86 L 96 106 L 120 82 L 154 125 Z" 
+        fill="#5a8c69" opacity="0.8"/>
+  
+  <!-- Pine trees -->
+  <path d="M 48 125 L 53 110 L 50 110 L 55 96 L 52 96 L 58 82 L 63 96 L 60 96 L 65 110 L 62 110 L 67 125 Z" 
+        fill="#1a3a0a"/>
+  <path d="M 72 130 L 76 117 L 74 117 L 78 106 L 76 106 L 80 94 L 84 106 L 82 106 L 86 117 L 84 117 L 88 130 Z" 
+        fill="#1a3a0a"/>
+  <path d="M 106 130 L 110 117 L 108 117 L 112 106 L 110 106 L 114 94 L 118 106 L 116 106 L 120 117 L 118 117 L 122 130 Z" 
+        fill="#1a3a0a"/>
+  <path d="M 130 125 L 135 110 L 132 110 L 137 96 L 134 96 L 140 82 L 145 96 L 142 96 L 147 110 L 144 110 L 149 125 Z" 
+        fill="#1a3a0a"/>
+  
+  <ellipse cx="96" cy="130" rx="67" ry="8" fill="#1a3a0a" opacity="0.3"/>
+</svg>
