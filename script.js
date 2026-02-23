@@ -52,7 +52,7 @@ function stopTimer() {
     
     if (elapsedSeconds > 0) {
         const hours = elapsedSeconds / 3600;
-        const today = new Date().toISOString().split('T')[0];
+        const today = getLocalDateString(new Date());
         addTime(today, hours);
         elapsedSeconds = 0;
         updateTimerDisplay();
@@ -60,6 +60,13 @@ function stopTimer() {
     
     document.getElementById('startBtn').disabled = false;
     document.getElementById('stopBtn').disabled = true;
+}
+
+function getLocalDateString(date) {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
 }
 
 function addTime(date, hours) {
@@ -88,7 +95,7 @@ function deleteTime(date) {
 
 function updateStats() {
     const data = loadData();
-    const today = new Date().toISOString().split('T')[0];
+    const today = getLocalDateString(new Date());
     const currentMonth = today.substring(0, 7);
     const currentYear = today.substring(0, 4);
     
@@ -124,7 +131,7 @@ window.renderCalendar = renderCalendar;
 
 function updateProgressTrackers() {
     const data = loadData();
-    const today = new Date().toISOString().split('T')[0];
+    const today = getLocalDateString(new Date());
     const todayHours = data[today] || 0;
     
     const todayPercent = Math.min((todayHours / DAILY_GOAL) * 100, 100);
@@ -229,14 +236,14 @@ function renderHistory() {
     `;
 }
 
-function editEntry(date, currentHours) {
+window.editEntry = function(date, currentHours) {
     const newHours = prompt(`Edit hours for ${date}:`, currentHours.toFixed(2));
     if (newHours !== null && !isNaN(newHours) && parseFloat(newHours) >= 0) {
         updateTime(date, parseFloat(newHours));
     }
 }
 
-function deleteEntry(date) {
+window.deleteEntry = function(date) {
     if (confirm(`Delete entry for ${date}?`)) {
         deleteTime(date);
     }
@@ -286,7 +293,7 @@ function renderCalendar() {
     
     const firstDay = new Date(year, month, 1).getDay();
     const daysInMonth = new Date(year, month + 1, 0).getDate();
-    const today = new Date().toISOString().split('T')[0];
+    const today = getLocalDateString(new Date());
     
     const dayHeaders = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     let calendarHTML = dayHeaders.map(day => 
@@ -320,7 +327,7 @@ function renderCalendar() {
     calendar.innerHTML = calendarHTML;
 }
 
-function quickEdit(date, currentHours) {
+window.quickEdit = function(date, currentHours) {
     const newHours = prompt(`Edit hours for ${date}:`, currentHours.toFixed(2));
     if (newHours !== null && !isNaN(newHours) && parseFloat(newHours) >= 0) {
         if (parseFloat(newHours) === 0) {
@@ -364,7 +371,7 @@ function checkMilestones() {
     const data = loadData();
     const milestones = JSON.parse(localStorage.getItem('milestones') || '{}');
     
-    const today = new Date().toISOString().split('T')[0];
+    const today = getLocalDateString(new Date());
     const currentWeek = getWeekKey(new Date());
     const currentMonth = today.substring(0, 7);
     const currentYear = today.substring(0, 4);
@@ -440,7 +447,7 @@ function showMilestone(icon, title, message) {
     modal.style.display = 'block';
 }
 
-function closeMilestone() {
+window.closeMilestone = function() {
     document.getElementById('milestoneModal').style.display = 'none';
 }
 
